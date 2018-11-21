@@ -28,14 +28,14 @@ class Song
   end
 
   def self.genres
-    @non_unique_genres = @@genres
+    # @non_unique_genres = @@genres
     @@genres.uniq
   end
 
   def self.genre_count
     genre_count = {}
     @@genres.each do |genre|
-      genre_count[genre] = @non_unique_genres.count(genre)
+      genre_count[genre] = @@genres.count(genre)
     end
 
     genre_count
@@ -43,7 +43,6 @@ class Song
 
   def self.artist_count
     artist_count = {}
-
     @@artists.each do |artist|
       artist_count[artist] = @non_unique_artists.count(artist)
     end
