@@ -17,6 +17,7 @@ class Song
     @@genres << genre #if !@@genres.include?(genre)
   end
 
+<<<<<<< HEAD
   def self.count
     @@count
   end
@@ -32,15 +33,39 @@ class Song
   def self.genre_count
     genre_hash = Hash.new(0)
     @@genres.each do |genre|
+=======
+  def count
+    @@count
+  end
+
+  def artists
+    @@artists.uniq
+  end
+
+  def genres
+    @@genres.uniq
+  end
+
+  def genre_count
+    genre_hash = hash.new(0)
+    genres.each do |genre|
+>>>>>>> 3fb3a70960908531c3b15f7ae4933663ac4ac0c3
       genre_hash[genre] += 1
     end
     genre_hash
   end
 
+<<<<<<< HEAD
   def self.artist_count
     artist_hash = Hash.new(0)
     @@artists.each do |artist|
       artist_hash[artist] += 1
+=======
+  def artist_count
+    artist_hash = hash.new(0)
+    artists.each do |artist|
+      genre_hash[artist] += 1
+>>>>>>> 3fb3a70960908531c3b15f7ae4933663ac4ac0c3
     end
     artist_hash
   end
